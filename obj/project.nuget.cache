@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "4M/bh2s4Cn4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\igor.farias\\data\\development\\dotNet_Csharp\\API_Livraria\\API_Livraria.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\igor.farias\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\igor.farias\\.nuget\\packages\\microsoft.openapi\\1.6.22\\microsoft.openapi.1.6.22.nupkg.sha512",
+    "C:\\Users\\igor.farias\\.nuget\\packages\\swashbuckle.aspnetcore\\6.0.7\\swashbuckle.aspnetcore.6.0.7.nupkg.sha512",
+    "C:\\Users\\igor.farias\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\7.2.0\\swashbuckle.aspnetcore.annotations.7.2.0.nupkg.sha512",
+    "C:\\Users\\igor.farias\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\7.2.0\\swashbuckle.aspnetcore.swagger.7.2.0.nupkg.sha512",
+    "C:\\Users\\igor.farias\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\7.2.0\\swashbuckle.aspnetcore.swaggergen.7.2.0.nupkg.sha512",
+    "C:\\Users\\igor.farias\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.0.7\\swashbuckle.aspnetcore.swaggerui.6.0.7.nupkg.sha512"
+  ],
+  "logs": []
+}

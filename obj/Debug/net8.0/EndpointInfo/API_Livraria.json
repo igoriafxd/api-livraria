@@ -1,0 +1,179 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API_Livraria",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/livros": {
+      "get": {
+        "tags": [
+          "Livros"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Livros"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Livro"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Livro"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Livro"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/livros/{id}": {
+      "get": {
+        "tags": [
+          "Livros"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Livros"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Livro"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Livro"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Livro"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Livros"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Livro": {
+        "required": [
+          "autor",
+          "estoque",
+          "genero",
+          "preco",
+          "titulo"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "titulo": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "autor": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "genero": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "preco": {
+            "minimum": 0,01,
+            "type": "number",
+            "format": "double"
+          },
+          "estoque": {
+            "maximum": 2147483647,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

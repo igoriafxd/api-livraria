@@ -1,0 +1,81 @@
+[
+  {
+    "ContainingType": "API_Livraria.Controllers.LivrosController",
+    "Method": "GetAll",
+    "RelativePath": "api/livros",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_Livraria.Controllers.LivrosController",
+    "Method": "Add",
+    "RelativePath": "api/livros",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "livro",
+        "Type": "API_Livraria.Models.Livro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_Livraria.Controllers.LivrosController",
+    "Method": "GetById",
+    "RelativePath": "api/livros/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_Livraria.Controllers.LivrosController",
+    "Method": "Update",
+    "RelativePath": "api/livros/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "livroAtualizado",
+        "Type": "API_Livraria.Models.Livro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_Livraria.Controllers.LivrosController",
+    "Method": "Delete",
+    "RelativePath": "api/livros/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,12 @@
+Id,Titulo,Autor,Genero,Preco,Estoque
+1,Dom Casmurro,Machado de Assis,Ficção,29,00,99
+2,Senhora,José de Alencar,Ficção,25,00,50
+3,O Primo Basílio,José de Alencar,Ficção,19,00,90
+4,Memórias Póstumas de Brás Cubas,Machado de Assis,Ficção,39,00,99
+5,A Moreninha,José de Alencar,Ficção,22,00,75
+6,O Guarani,José de Alencar,Ficção,18,00,60
+7,O Cortiço,Aluisio Azevedo,Ficção,15,00,99
+8,A Escrava Isaura,Augusto de Azevedo,Ficção,27,00,80
+9,Iracema,José de Alencar,Ficção,24,00,60
+10,Senhora,José de Alencar,Ficção,30,00,0
+11,string,string,string,6,12,50
