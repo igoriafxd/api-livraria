@@ -1,63 +1,65 @@
-API Livraria 📚
-🚀 Uma API simples para gerenciar um catálogo de livros, permitindo operações de CRUD (Create, Read, Update, Delete).
+# API Livraria
 
-🔹 Sobre o Projeto
-Esta API foi desenvolvida em .NET 7 com ASP.NET Core, permitindo o gerenciamento de livros através de endpoints REST. Os dados são armazenados em um arquivo CSV, garantindo uma abordagem simples e acessível para manipulação dos registros.
+Uma API simples para gerenciamento de livros, construída com .NET 8.
 
-📌 Funcionalidades
-✔️ Listar todos os livros
-✔️ Buscar um livro por ID
-✔️ Adicionar um novo livro
-✔️ Atualizar as informações de um livro
-✔️ Remover um livro do catálogo
+## Estrutura do Projeto
 
-🛠 Tecnologias Utilizadas
-.NET 7 e ASP.NET Core 🌐
-C# como linguagem principal
-CSV como banco de dados simples
-Git e GitHub para controle de versão
-📂 Estrutura do Projeto
-bash
-Copiar
-Editar
-📦 API_Livraria
- ┣ 📂 Controllers        # Endpoints da API
- ┣ 📂 Models             # Modelos de dados
- ┣ 📂 Repositories       # Regras de negócio e acesso a dados
- ┣ 📜 appsettings.json   # Configurações da API
- ┣ 📜 Program.cs         # Ponto de entrada da aplicação
- ┣ 📜 README.md          # Documentação do projeto
- ┣ 📜 .gitignore         # Arquivos ignorados pelo Git
-🚀 Como Rodar a API
-1️⃣ Clone este repositório:
+A API é organizada da seguinte forma:
 
-bash
-Copiar
-Editar
-git clone https://github.com/SEU_USUARIO/api-livraria.git
-2️⃣ Abra a pasta do projeto no VS Code:
+-   **Controllers:** Contém os controladores da API (ex: `LivrosController.cs`).
+-   **Models:** Contém as classes de modelo (ex: `Livro.cs`).
+-   **Repositories:** Contém as classes responsáveis pelo acesso aos dados (ex: `LivroRepository.cs`).
+-   **Data:** Contém os arquivos de dados (ex: `livros.csv`).
 
-bash
-Copiar
-Editar
-cd api-livraria
-3️⃣ Execute a API:
+## Modelo de Dados (`Livro.cs`)
 
-bash
-Copiar
-Editar
-dotnet run
-4️⃣ Acesse no navegador ou Postman:
+O modelo `Livro` representa um livro e possui as seguintes propriedades:
 
-bash
-Copiar
-Editar
-http://localhost:5000/api/livros
-🛠 Endpoints da API
-Método	Rota	Descrição
-GET	/api/livros	Lista todos os livros
-GET	/api/livros/{id}	Busca um livro pelo ID
-POST	/api/livros	Adiciona um novo livro
-PUT	/api/livros/{id}	Atualiza os dados de um livro
-DELETE	/api/livros/{id}	Remove um livro do catálogo
+| Propriedade | Tipo     | Descrição                                   | Obrigatório |
+| :---------- | :------- | :------------------------------------------ | :---------- |
+| `Id`        | `int`    | Identificador único do livro.               | Sim         |
+| `Titulo`    | `string` | Título do livro.                            | Sim         |
+| `Autor`     | `string` | Autor do livro.                             | Sim         |
+| `Genero`    | `string` | Gênero do livro.                            | Sim         |
+| `Preco`     | `decimal` | Preço do livro (deve ser maior que zero). | Sim         |
+| `Estoque`   | `int`    | Quantidade em estoque (não pode ser negativo). | Sim         |
 
+## Endpoints da API (`LivrosController.cs`)
+
+A API possui os seguintes endpoints:
+
+| Método HTTP | Endpoint          | Descrição                                      |
+| :---------- | :---------------- | :--------------------------------------------- |
+| `GET`       | `/api/livros`     | Retorna todos os livros.                       |
+| `GET`       | `/api/livros/{id}` | Retorna um livro específico pelo ID.          |
+| `POST`      | `/api/livros`     | Adiciona um novo livro.                        |
+| `PUT`       | `/api/livros/{id}` | Atualiza um livro existente.                   |
+| `DELETE`    | `/api/livros/{id}` | Exclui um livro.                              |
+
+## Acesso a Dados
+
+Os dados dos livros são armazenados em um arquivo CSV (`Data/livros.csv`). A classe `LivroRepository` é responsável por ler, adicionar, atualizar e excluir livros do arquivo CSV.
+
+## Formato dos Dados (CSV)
+
+O arquivo `livros.csv` segue o seguinte formato:
+
+```
+Id,Titulo,Autor,Genero,Preco,Estoque
+1,Dom Casmurro,Machado de Assis,Ficção,29.00,99
+2,Senhora,José de Alencar,Ficção,25.00,50
+...
+```
+
+## Como Executar o Projeto
+
+1.  Certifique-se de ter o .NET 8 SDK instalado.
+2.  Clone este repositório.
+3.  Navegue até a pasta raiz do projeto (onde este README.md está localizado).
+4.  Execute o comando `dotnet run` no terminal.
+5.  A API estará disponível em `http://localhost:5000` (ou outra porta, se configurado).
+
+## Exemplo de requisição
+
+```http
+GET http://localhost:5000/api/livros
